@@ -4,7 +4,8 @@
   "description": "General Purpose API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js | node_modules/.bin/bunyan"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,11 @@
   "bugs": {
     "url": "https://gitlab.com/JacopoBonta/general-purpose-api/issues"
   },
-  "homepage": "https://gitlab.com/JacopoBonta/general-purpose-api#readme"
+  "homepage": "https://gitlab.com/JacopoBonta/general-purpose-api#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4"
+  }
 }
