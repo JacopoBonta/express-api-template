@@ -1,29 +1,36 @@
 {
-  "name": "general-purpose-api",
+  "name": "express-api-template",
   "version": "0.0.0",
-  "description": "General Purpose API",
+  "description": "A template for writing RESTful API based on Node.js and Express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js | node_modules/.bin/bunyan"
+    "start": "node index.js | node_modules/.bin/bunyan",
+    "dev": "nodemon | node_modules/.bin/bunyan",
+    "trace": "node_modules/.bin/bunyan ./logs/express-api-template.trace.log"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/JacopoBonta/general-purpose-api.git"
+    "url": "git@github.com:JacopoBonta/express-api-template.git"
   },
   "keywords": [
-    "api"
+    "api",
+    "rest",
+    "express",
+    "template"
   ],
   "author": "bonta.jacopo@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/JacopoBonta/general-purpose-api/issues"
+    "url": "https://github.com/JacopoBonta/express-api-template/issues"
   },
-  "homepage": "https://gitlab.com/JacopoBonta/general-purpose-api#readme",
+  "homepage": "https://github.com/JacopoBonta/express-api-template#readme",
   "dependencies": {
     "bunyan": "^1.8.12",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
