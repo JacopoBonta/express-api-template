@@ -18,6 +18,7 @@ curl http://localhost:3000/status
 ## Environments
 Le API contengono alcuni paramentri configurabili tramite le variabili d'ambiente.
 Il modo più semplice per settarle è creare un file chiamato `.env` nella root della cartella.
+
 **Variables:**
 ```sh
 # Indirizzo del server
@@ -42,7 +43,7 @@ module.exports = route
 ```
 
 ## Logger
-È incluso un logger basato su [bunyay](https://www.npmjs.com/package/bunyan) e disponibile nelle varie routes tramite l'oggetto `request`.
+È incluso un logger basato su [bunyan](https://www.npmjs.com/package/bunyan) e disponibile nelle varie routes tramite l'oggetto `request`.
 
 ```js
 route.get('/', (req, res) => {
@@ -59,7 +60,7 @@ Per visualizzare il file da terminale usare `npm run trace`.
 È incluso inoltre un `Dockerfile` per buildare un immagine della tua API.
 
 **How to use it**
-1. Inanzitutto ricordati di modificare le variabili ENV ed EXPOSE - il valore di EXPOSE deve coincidere con quello di ENV PORT
+1. Inanzitutto ricordati di modificare le variabili ENV ed EXPOSE all'interno del `Dockerfile`. Il valore di `EXPOSE` deve coincidere con quello di `ENV PORT`
 2. Build:
 ```sh
 docker build -t my-custom-api .
